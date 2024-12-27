@@ -4,6 +4,7 @@ import BgImg from './components/bg-img/BgImg';
 import About from './components/about/About';
 import Categories from './components/categories/categories';
 import Products from './components/products/Products.jsx';
+import AllProducts from './components/allProducts/AllProducts.jsx';
 import Create from './components/create/Create.jsx';
 import Quotes from './components/quotes/Quotes.jsx';
 import Footer from './components/footer/Footer';
@@ -16,8 +17,6 @@ export default function App() {
       <Navbar />
       <BgImg/>
       <About />
-      <Categories/>
-      <Products/>
       <Routes>
         <Route path="/categories" element={<Categories/>}/>
         <Route path="/products" element={<Products/>}/>

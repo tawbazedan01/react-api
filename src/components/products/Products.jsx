@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import useFetch from '../../assets/hooks/useFetch';
 import Loading from '../loading/Loading';
+import style from './products.module.css'; 
 
 export default function Products() {
   const { data, error, isLoading } = useFetch(`https://dummyjson.com/products?limit=5`);
@@ -13,16 +14,16 @@ export default function Products() {
   return (
     <>
       {error ? <div className='alert alert-danger'>{error}</div> : ''}
-      {
-        <div className='products container'>
+      <div className='products container p-5'>
+        <div className="row justify-content-evenly ">
           {data.products.map(product => (
-            <div key={product.id} className='product'>
-              <img src={product.thumbnail} alt={product.title} />
-              <h2>{product.title}</h2>
+            <div key={product.id} className={`col-2 ${style.product} text-center shadow`}>
+              <img src={product.thumbnail} alt={product.title} width={200} />
+              <h6>{product.title}</h6>
             </div>
           ))}
         </div>
-      }
+      </div>
     </>
   );
 }

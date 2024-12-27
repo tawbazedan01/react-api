@@ -1,6 +1,8 @@
 import React from 'react';
 import useFetch from '../../assets/hooks/useFetch';
 import Loading from '../loading/Loading';
+import style from './categories.module.css';
+
 
 export default function Categories() {
     const { data, error, isLoading } = useFetch(`https://dummyjson.com/products/category-list`);
@@ -14,13 +16,18 @@ export default function Categories() {
         <>
 
             {error ? <div className='alert alert-danger'>{error}</div> : ''}
-            {
-                <div className='category container'>
-                    {data.map(category =>
-                        <h2>{category}</h2>
-                    )}
+
+            <div className="categories container">
+                <div className="row justify-content-evenly">
+                    {data.map((category, index) => (
+                        <div key={index} className={`col-3 ${style.category}`}>
+                            <h3>{category}</h3>
+                            <span></span>
+                        </div>
+                    ))}
                 </div>
-            }
+            </div>
+
         </>
     );
 }
