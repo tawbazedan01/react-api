@@ -21,7 +21,7 @@ export default function Products() {
             <div key={product.id} className={`col-2 ${style.product} text-center shadow`}>
               <img src={product.thumbnail} alt={product.title} width={200} />
               <h6>{product.title}</h6>
-              <span className='nav-link'><Link to={`/productDetails/${product.id}`} className="text-decoration-none text-primary hover-link">Details</Link></span>
+              <span className='nav-link'><Link to={`/limitDetails/${product.id}`} className="text-decoration-none text-secondary hover-link">Details</Link></span>
             </div>
           ))}
         </div>

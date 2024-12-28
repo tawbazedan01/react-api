@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 import useFetch from '../../assets/hooks/useFetch';
 import Loading from '../loading/Loading';
 import { useParams } from 'react-router-dom';
 
-export default function DetailsP() {
+export default function LimitDetails() {
     const { id } = useParams();
     const { data, error, isLoading } = useFetch(`https://dummyjson.com/products/${id}`);
 
@@ -60,7 +60,6 @@ export default function DetailsP() {
                     </div>
                 </div>
             ))}
-
         </div>
-    );
+    )
 }

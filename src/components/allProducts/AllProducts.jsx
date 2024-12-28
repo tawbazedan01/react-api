@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // تأكد من إضافة هذا السطر
+import { Link } from 'react-router-dom';
 import useFetch from '../../assets/hooks/useFetch';
 import Loading from '../loading/Loading';
 
@@ -30,7 +30,7 @@ export default function AllProducts() {
                   <span className='nav-link'>
                     <Link 
                       to={`/productDetails/${product.id}`} 
-                      className="text-decoration-none text-primary hover-link">
+                      className="text-decoration-none text-secondary hover-link">
                       Details
                     </Link>
                   </span>

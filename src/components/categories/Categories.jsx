@@ -21,7 +21,7 @@ export default function Categories() {
                     {data.map((category, index) => (
                         <div key={index} className={`col mb-4 d-flex flex-column align-items-center ${style.category}`}>
                             <h3 className="text-center">{category}</h3>
-                            <span><Link to={`/categories/${category}`} className="text-decoration-none text-primary">Category Details</Link></span>
+                            <span><Link to={`/categories/${category}`} className="text-decoration-none text-secondary">Category Details</Link></span>
                         </div>
                     ))}
                 </div>
