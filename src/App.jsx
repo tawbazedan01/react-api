@@ -10,6 +10,7 @@ import AllProducts from './components/allProducts/AllProducts.jsx';
 import Detailsp from './components/productDetails/DetailsP.jsx';
 import Create from './components/create/Create.jsx';
 import Quotes from './components/quotes/Quotes.jsx';
+import Random from './components/randomQuotes/Random.jsx';
 import Footer from './components/footer/Footer';
 import { Route, Routes } from 'react-router-dom';
 
@@ -27,7 +28,7 @@ export default function App() {
         <Route path="/products" element={<AllProducts />} />
         <Route path="/productDetails/:id" element={<Detailsp />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/quotes" element={<Quotes />} />
+        <Route path="/quotes" element={<><Random /><Quotes /></>} />
       </Routes>
       <Footer />
     </>

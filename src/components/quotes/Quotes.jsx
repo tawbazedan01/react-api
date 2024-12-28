@@ -1,7 +1,8 @@
 import React from 'react'
 import useFetch from '../../assets/hooks/useFetch';
 import Loading from '../loading/Loading';
-import style from './quotes.module.css'; // تأكد من أنك أضفت ملف CSS لتنسيق الـ Quotes
+import style from './quotes.module.css'; 
+
 
 export default function Quotes() {
   const { data, error, isLoading } = useFetch(`https://dummyjson.com/quotes`);
